@@ -24,10 +24,13 @@ public class MarkdownParse {
 	    if (nextOpenBracket == -1 || nextCloseBracket == -1 || openParen == -1 || closeParen == -1) {
 		    return toReturn;
 	    }
-            
+            //check if open paran is right after next closed bracket
             if (nextCloseBracket + 1 == openParen) {
-                if (nextOpenBracket == 0 || 
-                    !(markdown.substring(nextOpenBracket - 1, nextOpenBracket).equals("!"))) {
+                //added 
+                int containsSpace = markdown.substring(openParen + 1, closeParen).indexOf(" ");
+                if ((nextOpenBracket == 0 || 
+                    !(markdown.substring(nextOpenBracket - 1, nextOpenBracket).equals("!")))
+                    && containsSpace == -1) {
                     toReturn.add(markdown.substring(openParen + 1, closeParen));
                 }
             }

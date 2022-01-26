@@ -72,7 +72,10 @@ public class MarkdownParseTest {
     public void testFile8() throws IOException{
         Path fileName = Path.of("./test-file8.md");
 	    String contents = Files.readString(fileName);
-        List<String> expected = List.of("a link on the first line");
+        List<String> expected = List.of();
+        //not correct since its not a link, just text
+        //having spaces causes it to not be a link
+        //account for this in the code
         assertEquals(expected, MarkdownParse.getLinks(contents));
     }
 
