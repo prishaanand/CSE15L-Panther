@@ -84,5 +84,10 @@ public class MarkdownParseTest {
         assertEquals(13, 1 + 12);
     }
 
+    @Test
+    public void secondFail(){
+        assertTrue(true);
+    }
+
 
 }
