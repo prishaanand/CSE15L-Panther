@@ -79,10 +79,10 @@ public class MarkdownParseTest {
         assertEquals(expected, MarkdownParse.getLinks(contents));
     }
 
-    @Test
-    public void additionFail() {
-        assertEquals(13, 1 + 12);
-    }
+   // @Test
+   // public void additionFail() {
+    //    assertEquals(13, 1 + 12);
+   // }
 
     @Test
     public void secondFail(){
