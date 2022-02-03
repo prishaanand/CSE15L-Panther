@@ -81,7 +81,7 @@ public class MarkdownParseTest {
 
     @Test
     public void additionFail() {
-        assertEquals(13, 1 + 1);
+        assertEquals(13, 12 + 1);
     }
 
     
