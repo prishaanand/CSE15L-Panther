@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+//run in the terminal not using the run button 
 public class MarkdownParseTest {
     @Test
     public void addition() {
@@ -12,7 +13,7 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void testFile2() throws IOException{
+    public void testFile2() throws IOException {
         Path fileName = Path.of("./test-file2.md");
 	    String contents = Files.readString(fileName);
         List<String> expected = List.of();
